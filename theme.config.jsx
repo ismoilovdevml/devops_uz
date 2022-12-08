@@ -11,6 +11,10 @@ import { useConfig } from 'nextra-theme-docs'
         titleTemplate: '%s – DevOps'
       }
     },
+    search: {
+      placeholder: "Qidirish...",
+      loading: "Qidirilmoqda..."
+    },
     head: (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,7 +45,7 @@ import { useConfig } from 'nextra-theme-docs'
         if (title === 'About') {
           return <>❓ {title}</>
         }
-        return <>👉 {title}</>
+        return <>💠 {title}</>
       }
     },
     navigation: {
@@ -52,5 +56,38 @@ import { useConfig } from 'nextra-theme-docs'
       text: <span>
         MIT {new Date().getFullYear()} © <a href="https://github.com/ismoilovdevml/devops_uz" target="_blank">DevOps uz</a>.
       </span>,
-    }
+    },
+    feedback: {
+      content: "Savollar? Shu yerda qoldiring"
+    },
+    editLink: {
+      text: () => {
+        const {route} = useRouter()
+        if (route.includes('/showcases/')) {
+          return null
+        }
+        return "GitHub da o'zgartirish kiritish"
+      },
+    },
+    nextThemes: {
+      defaultTheme: 'system'
+    },
+    footer: {
+      text: ({locale}) => {
+        return (
+          <p className='no-underline text-current font-semibold'>
+            <a
+              href='https://t.me/ismoilovdev'
+              target='_blank'
+              rel='noopener'
+              className='no-underline font-semibold'
+            >
+              DevOps Uzbekistan
+            </a>{' '}
+            Hamjamiyati
+          </p>
+        )
+      },
+    },
+    gitTimestamp: true,
   }

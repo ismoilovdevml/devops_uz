@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/docs.js"
-    ],
-    "/docs/kirish": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/docs/kirish.js"
     ]
   },
   "ampFirstPages": []

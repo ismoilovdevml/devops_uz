@@ -1,0 +1,24 @@
+{
+    "index": {
+      "title": "Asosiy",
+      "type": "page",
+      "hidden": true,
+      "theme": {
+        "sidebar": false,
+        "toc": false,
+        "footer": true,
+        "pagination": true,
+        "breadcrumb": false
+      }
+    },
+    "docs": {
+      "title": "Qo'llanma",
+      "type": "page"
+    },
+    "Github": {
+      "title": "Jamiyat",
+      "type": "page",
+      "newWindow": true,
+      "href": "https://github.com/ismoilovdev"
+    }
+  }

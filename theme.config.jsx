@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
  export default {
-    logo: <span>My Nextra Documentation</span>,
+    logo: <span>DevOps Uz hamjamiyati</span>,
     project: {
       link: 'https://github.com/ismoilovdevml/devops_uz',
     },

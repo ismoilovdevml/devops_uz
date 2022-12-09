@@ -4,7 +4,6 @@
 	"description": "DevOps Uzbekistan",
 	"main": "theme.config.js",
 	"dependencies": {
-	  "cobe": "^0.6.2",
 	  "next": "^13.0.6",
 	  "nextra": "2.0.1",
 	  "nextra-theme-docs": "2.0.1",

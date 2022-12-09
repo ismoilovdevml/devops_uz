@@ -1,0 +1,32 @@
+# Ubuntu 20.04 da Linux, Nginx, MySQL, PHP (LEMP stek) qanday o'rnatiladi
+
+## Kirish
+
+`LEMP` dasturiy ta'minot to'plami PHPda yozilgan dinamik veb-sahifalar va veb-ilovalarga xizmat ko'rsatish uchun ishlatilishi mumkin bo'lgan dasturiy ta'minot guruhidir. Bu Nginx (" `E` ngine-X" kabi talaffuz qilinadi) veb-serverli `L` inux operatsion tizimini tavsiflovchi qisqartma . Backend ma'lumotlari `M` ySQL ma'lumotlar bazasida saqlanadi va dinamik ishlov berish `P` HP tomonidan amalga oshiriladi.
+Ushbu qo'llanma Ubuntu 20.04 serveriga `LEMP` stekini qanday o'rnatishni ko'rsatadi. Ubuntu operatsion tizimi birinchi talabni bajaradi. Qolgan komponentlarni qanday qilib ishga tushirishni tasvirlab beramiz.
+
+### 1-qadam - Nginx veb-serverini o'rnatish
+
+Saytimizga tashrif buyuruvchilarga veb-sahifalarni ko'rsatish uchun biz `Nginx`, yuqori samarali veb-serverdan foydalanmoqchimiz. Ushbu dasturni o'rnatish uchun biz apt paket menejeridan foydalanamiz. Ushbu seans uchun apt-dan birinchi marta foydalanayotganimiz sababli, serveringiz paketlarini yangilashdan boshlang. 
+
+Shundan so'ng, Nginx-ni o'rnatish uchun `apt install`-dan foydalanishingiz mumkin:
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+O'rnatmoqchi bo'ganingizda Nginx-ni o'rnatmoqchi ekanligingizni tasdiqlash so'raladi o'rnatish uchun `Y` kiriting. O'rnatish tugallangach, Nginx veb-serveri faol bo'ladi va Ubuntu 20.04 serveringizda ishlaydi. Agar sizda `ufw firewall` yoqilgan bo'lsa, bizning serverni sozlash bo'yicha qo'llanmamizda tavsiya etilganidek, Nginx-ga ulanishga ruxsat berishingiz kerak bo'ladi.
+Nginx o'rnatishdan so'ng bir nechta turli UFW ilova profillarini ro'yxatdan o'tkazadi. Qaysi UFW dasturlari mavjudligini tekshirish uchun quyidagilarni bajaring:
+
+```bash
+sudo ufw app list
+```
+
+```bash
+Output
+Available applications:
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+```
